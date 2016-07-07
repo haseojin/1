@@ -1,0 +1,69 @@
+
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+#login_form{font-family: 'Jeju Myeongjo', serif;width: 400px;height: 350px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto;box-shadow: 10px 10px 10px #d0d0d0;}
+
+#alogin_form{font-family: 'Jeju Myeongjo', serif;width: 400px;height: 300px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto;box-shadow: 10px 10px 10px #d0d0d0;}
+#findpw_form{font-family: 'Jeju Myeongjo', serif;width: 400px;height: 350px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto;box-shadow: 10px 10px 10px #d0d0d0;}
+
+#member_form{font-family: 'Jeju Myeongjo', serif;width: 400px;height: 540px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto;box-shadow: 10px 10px 10px #d0d0d0;}
+#cmember_form{font-family: 'Jeju Myeongjo', serif;width: 400px;height: 610px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto;box-shadow: 10px 10px 10px #d0d0d0;}
+
+#insert_form{font-family: 'Jeju Myeongjo', serif;width: 400px;height: 740px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto; margin-left: auto;box-shadow: 10px 10px 10px #d0d0d0;}
+.line{display:block;padding-right:400px;margin-right:5px;border-bottom:1px solid #d0d0d0;}
+
+input[type="text"],
+input[type="password"] {height: auto; line-height: normal; padding: .8em .5em;}
+select {height: auto; line-height: normal; padding: .8em .5em;}
+
+#big_label{margin-top:8px;margin-bottom:7px; font-weight: bold; text-align: left; margin-left: 20px; font-size:15px; }
+#middle{text-align:center;margin-top:30px;}
+
+.label1{margin-left:60px;text-align:left;color:#b5b5b5;font-size:13px;}
+
+#btns{margin-bottom:15px;}
+#btns2{margin-bottom:20px;margin-top:20px;}
+#login_bottom{text-align:center;margin-top:17px;color:#898989;font-size: 14px;}
+#login_bottom a:link{color:#898989;text-decoration:none;}
+#login_bottom a:visited{color:#898989;text-decoration:none;}
+#login_bottom a:hover{color:#898989;text-decoration:none;}
+#login_bottom a:active{color:#898989;text-decoration:none;}
+
+#remember{margin-top:10px;color:#999999;font-size:10pt;}
+
+.icon_login{background-image:url("../img/login.png");width:100px;height:35px;}
+#overlap{margin-top:5px;background-image:url("../img/overlap.png"); width:57px; height:23px; }
+#overlapp{margin-left:5px;text-align:left;color:#b5b5b5;font-size:12px;}
+
+
+#member_list1{font-family: 'Jeju Myeongjo', serif;width: 1000px;height: 60px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto;}
+#member_list1 th{width:820px;font-size: 20px;border-top:5px;border-bottom: 5px; font-weight: bold;}
+#member_list1 td{width:60px;font-size: 15px;border-top:5px;border-bottom: 5px;}
+.total_member {font-size:17px; font-weight: bold; }
+
+#member_list2{font-family: 'Jeju Myeongjo', serif;width: 1000px;height: 40px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto; margin-top: 5px;}
+
+#member_list3{font-family: 'Jeju Myeongjo', serif;width: 1000px;border: 1px solid #d0d0d0;border-radius: 5px;margin-right: auto;margin-left: auto;}
+
+.m_list3_line{font-family: 'Jeju Myeongjo', serif;width: 1000px;height: 8px;margin-right: auto;margin-left: auto;}
+
+.num{width:50px;}
+.cnt{width:70px;}
+
+
+.id{width:60px;}
+.n_name{width:60px;}
+
+
+.p_number{width:120px;}
+.email{width:120px;}
+
+
+.gender{width:60px;}
+.area{width:60px;}
+
+.insert_date{width:180px;}
+.last_date{width:180px;}
+
+

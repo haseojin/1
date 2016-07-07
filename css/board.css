@@ -2,7 +2,6 @@
 
 @import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
 
-
  #list_table{border:0px;width:75%;height: 100%;  border-spacing:0px;margin-right: auto; margin-left: auto; text-align: center;}
  #list_table_td{ width:100%;height:10px;}
  #list_table_title{font-size:20px; height:40px;background-color: #e0dfde;}/*background-color: #e0dfde;*/

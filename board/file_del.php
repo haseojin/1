@@ -2,12 +2,10 @@
 
  include('../lib/db_connect.php');
 
-
 $no=$_GET[no];
 $id=$_GET[no];
 $query = "SELECT * FROM $id ". 
 "WHERE no='". $no. "' ;";
-
 
 $result= mysqli_query($con, $query);
 $data= mysqli_fetch_array($result);

@@ -36,8 +36,6 @@
 	}
 ?>
 
-
-
 <!DOCTYPE HTML>
 <html>
 <head>

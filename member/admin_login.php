@@ -85,8 +85,6 @@ function checkInput() {
 			</nav>
 
 
-
-
 		</header>
 		<div id="header2">
 			<p id="header2p">관리자 로그인</p>

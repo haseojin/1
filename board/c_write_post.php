@@ -2,8 +2,6 @@
 
 include ("../lib/db_connect.php"); // DB접속
 
-
-
 $subject=$_POST[subject]; //게시판 제목
 $story=$_POST[story]; //게시판 내용
 $now = date(YmdHis);

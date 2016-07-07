@@ -24,6 +24,7 @@
     echo "는 중복되지 않았습니다.<br>";
   }
 ?>
+
 <br>
 <input type=button value="닫기" onclick="self.close()"></center>
 

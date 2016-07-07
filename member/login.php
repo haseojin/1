@@ -20,6 +20,7 @@ $(function(){
 });
 </script>
 
+
 <script language="JavaScript">
 	function checkInput() {
 		if(document.fname.uid.value == "") {

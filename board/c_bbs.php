@@ -8,7 +8,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>index</title>
-
 <link href="../css/common.css" rel="stylesheet" type="text/css">
 <link href="../css/board.css" rel="stylesheet" type="text/css">
 <!--전체메뉴 펼치기-->

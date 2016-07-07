@@ -7,7 +7,6 @@
 	$no=$_GET[no];
 	$id=$_GET[id];
 
-
 	$c_bbs="C/C++";
 	$j_bbs="JAVA/JSP";
 	$h_bbs="HTML/CSS";

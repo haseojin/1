@@ -34,7 +34,6 @@ $(function(){
 		document.fname.submit();
 	}
 
-
 </script>
 
 

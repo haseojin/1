@@ -1,7 +1,7 @@
 <?php
 
 						
-						session_start(); // 세션
+session_start(); // 세션
 					
 mysqli_set_charset($conn, 'utf8'); 
 					  

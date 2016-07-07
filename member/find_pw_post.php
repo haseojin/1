@@ -11,7 +11,6 @@
   $p_number=$tel1. $tel2. $tel3;
   $e_mail=$_POST[email];
   
-
   $sql = "SELECT * FROM member ". 
   "WHERE id='". $id. "';";
   $result = mysqli_query($con,$sql); 

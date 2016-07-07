@@ -119,8 +119,6 @@ $(function(){
 <table id="board_write">  
 
 
-
-
 <form name='write' action='./c_write_post.php' method='post' enctype='multipart/form-data'>
 <tr>
 

@@ -106,7 +106,6 @@ $(function(){
 		window.open(url,'tst','width='+sw+',height='+sh+',top='+mt+',left='+ml+',resizable=no,scrollbars=no');
 	}
 
-
 </script>
 </head>
 <body>	
@@ -283,5 +282,6 @@ $(function(){
 <a style="display:scroll; position:fixed; bottom:10px; right:20px;" href="#" title=Top>
 	<img src="../img/top.png">
 </a>
+
 </body>
 </html>

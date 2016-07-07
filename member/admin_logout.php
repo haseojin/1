@@ -6,8 +6,8 @@ if($_SESSION['aid']!=null){
    session_destroy();
 }
 echo"<script>
-				window. alert('관리자 로그아웃 하였습니다.');
-				location.replace='../index.php'
+			window. alert('관리자 로그아웃 하였습니다.');
+			location.replace='../index.php'
 	</script>";
 //echo "<script>location.replace='../index.php';</script>";
 

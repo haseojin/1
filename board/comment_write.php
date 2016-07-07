@@ -15,8 +15,6 @@ if($_SESSION['id']==null){
  	$user_n_name="관리자";
 }
 					  
-
-
  
  $no=$_GET[no];
  $id=$_GET[id];

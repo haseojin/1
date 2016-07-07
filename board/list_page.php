@@ -10,7 +10,6 @@
 //한페이지 나타날 게시글수 $view_total
 $rr=ceil($totals/$view_total);
 
-
 //이전 페이지 구하기
  $before= $_page-1; //현재 페이지수 에서 -1을 준다.
  if($before<1)($before=1); 

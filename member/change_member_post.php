@@ -3,7 +3,6 @@
   ####데이터베이스 서버에 연결한다.## 
   include ("../lib/db_connect.php"); // DB접속
   mysqli_set_charset($con, 'utf8'); 
-  //이부분 추가 해주시면 됩니다. 
 
   $id=$_SESSION['id'];
   $pws=$_POST[pwd];

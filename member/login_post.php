@@ -11,10 +11,7 @@
 	$sql = "SELECT * FROM member ". 
 	       "WHERE id='". $id. "' and pw='". $pw."';";
 
-
 	$result = $con->query($sql);
-
-
 
 	if ($result->num_rows > 0) {
 

@@ -31,17 +31,17 @@
 
 ?>
 <?php
-$query = "SELECT * FROM $id ". 
-"WHERE no='". $no. "' ;";
+	$query = "SELECT * FROM $id ". 
+	"WHERE no='". $no. "' ;";
 
-mysqli_query("set names utf8");
-$result= mysqli_query($con, $query);
-$data= mysqli_fetch_array($result);
+	mysqli_query("set names utf8");
+	$result= mysqli_query($con, $query);
+	$data= mysqli_fetch_array($result);
 
-$cnt = $data['hit']+1;
+	$cnt = $data['hit']+1;
 
-$sql3 = "UPDATE $id SET hit = '$cnt' WHERE no='$no'";
-mysqli_query($con,$sql3); 
+	$sql3 = "UPDATE $id SET hit = '$cnt' WHERE no='$no'";
+	mysqli_query($con,$sql3); 
 ?>
 
 <?php

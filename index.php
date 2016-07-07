@@ -107,10 +107,6 @@ $(function(){
 </head>
 
 <body>
-
-
-
-
 		<header>
 			<ul id="left_nav">
 				<li>Ha Seojin</li>

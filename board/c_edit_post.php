@@ -5,7 +5,6 @@
 	$no=$_POST[no];
 	$id=$_POST[id];
 
-
 	$subject= $_POST[subject];
 	$story= $_POST[story];
 	$now = date(YmdHis);

@@ -31,8 +31,6 @@ $query = "DELETE FROM $comment_db ".
   $result = mysqli_query($con,$query); 
 
     echo("<meta http-equiv='Refresh' content='0; URL=../index.php'>"); 
-
-
 ?>
 
 <script>

@@ -2,7 +2,6 @@
 	session_start(); // 세션
 	mysqli_set_charset($conn, 'utf8'); 
 ?>
-
 <!DOCTYPE HTML>
 <html>
 <head>

@@ -5,7 +5,6 @@
 	$no=$_GET[no];
 	$id=$_GET[id];
 
-
 	$query = "DELETE FROM $id ". 
 	       "WHERE no='". $no. "' ;";
 

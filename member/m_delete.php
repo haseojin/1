@@ -3,7 +3,6 @@
   mysqli_set_charset($conn, 'utf8'); 
 
   $id = $_SESSION['id'];
-
   ####데이터베이스 서버에 연결한다.## 
   include ("../lib/db_connect.php"); // DB접속
   mysqli_set_charset($con, 'utf8'); 

@@ -120,20 +120,7 @@ $(function(){
 	<p id="header2p">비밀번호 찾기</p>
 </div>
 
-<!--<div id='sidebar'>
-<h3>SNS 등록</h3>
-<ul>
-<li><a href='#'>페이스북</a></li>
-<li><a href='#'>트위터</a></li>
-</ul>
-<h3>카테고리</h3>
-<ul>
-<li><a href='#'>디지털 아트</a></li>
-<li><a href='#'>사운드 아트</a></li>
-<li><a href='#'>정보 가시화</a></li>
-<li><a href='#'>뉴 미디어 프로그래밍</a></li>
-</ul>					
-</div>  'sidebar' 끝-->
+
 <section>
 	<article>
 	<br><br><br>

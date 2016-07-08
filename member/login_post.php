@@ -8,25 +8,13 @@
 	$pw=md5($pws);
 
 	   
-	$sql = "SELECT * FROM member ". 
-	       "WHERE id='". $id. "' and pw='". $pw."';";
-
+	$sql = "SELECT * FROM member WHERE id='$id' and pw='$pw'";
 	$result = $con->query($sql);
 
 	if ($result->num_rows > 0) {
-
 		$row = $result->fetch_assoc();  // 검색된 레코드를 $row에 저장.
 
-		//echo "<h2>로그인 성공<h2>";
-
-		//echo "<h3>". $row['n_name']. "님이 로그인하였습니다.</h3>";
-
-		//echo "<a href='./index.php'>메인으로 이동</a>";
-
-		// Session 변수 만들기
-
 		$cnt = $row['cnt']+1;
-
 		$_SESSION['id'] = $id;
 		$_SESSION['pw'] = $pw; 
 		$_SESSION['n_name'] = $row['n_name']; 
@@ -42,8 +30,7 @@
 				window. alert('로그인 하였습니다');
 				location.href='../index.php';
 				</script>");
-	}
-	else{
+	}else{
 		echo ("<script>
 				window. alert('로그인실패');
 				location.href='./login.php';

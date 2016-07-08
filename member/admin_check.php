@@ -18,5 +18,4 @@
 			location.href='./admin_login.php';
 			</script>");
 	}	
-
 ?>

@@ -55,9 +55,6 @@ $(function(){
 		else if(exptext.test(form.email.value)==false)
 		//이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우
 		msg +="이메일형식이 올바르지 않습니다.\n\n";
-
- 
-
 		if(msg == "== 가입시 오류사항 ==\n\n"){
 			form.submit();
 		}else{
@@ -103,74 +100,57 @@ $(function(){
 <body>	
 <header>
 <ul id="left_nav">
-<li>Ha Seojin</li>
-<li class="space"></li>
-<li id="navi"><a href="#"><img src="../img/bullets-white.png"></a></li>
-<li class="login"><a href="./login.php">로그인</a></li>
-<li class="login"><a href="./admin_login.php">관리자 로그인</a></li>
+	<li>Ha Seojin</li>
+	<li class="space"></li>
+	<li id="navi"><a href="#"><img src="../img/bullets-white.png"></a></li>
+	<li class="login"><a href="./login.php">로그인</a></li>
+	<li class="login"><a href="./admin_login.php">관리자 로그인</a></li>
 </ul>
+
 <div id="slide">
-<div id="inner">---내용---</div>
+	<div id="inner">---내용---</div>
 </div>
 
 <hgroup>
-<p id="title"><a href="../index.php">포트폴리오</a></p>
-<p id="subtitle"><small>Coding Study</small></p>
-<p>
+	<p id="title"><a href="../index.php">포트폴리오</a></p>
+	<p id="subtitle"><small>Coding Study</small></p>
+	<p>
 </hgroup>
 
 
 <nav id="main_menu">
 <ul>
-
-<li>
-<a href="#">취업준비</a>
-<ul>
-<li><a href="../job/resume.php">이력서</a></li>
-<li><a href="../job/self_introduce.php">자기소개서</a></li>
-</ul>
-</li>
-<li>
-<a href="#">공부</a>
-<ul>
-<li><a href="../board/c_bbs.php">C/C++</a></li>
-<li><a href="../board/j_bbs.php">Java/Jsp</a></li>
-<li><a href="../board/h_bbs.php">HTML/CSS</a></li>
-<li><a href="../board/p_bbs.php">PHP</a></li>
-</ul>
-</li>
-<li>
-<a href="#">기타</a>
-<ul>
-<li><a href="#">영화</a></li>
-<li><a href="#">일기</a></li>
-</ul>
-</li>
+	<li>
+	<a href="#">취업준비</a>
+	<ul>
+		<li><a href="../job/resume.php">이력서</a></li>
+		<li><a href="../job/self_introduce.php">자기소개서</a></li>
+	</ul>
+	</li>
+	<li>
+	<a href="#">공부</a>
+	<ul>
+		<li><a href="../board/c_bbs.php">C/C++</a></li>
+		<li><a href="../board/j_bbs.php">Java/Jsp</a></li>
+		<li><a href="../board/h_bbs.php">HTML/CSS</a></li>
+		<li><a href="../board/p_bbs.php">PHP</a></li>
+	</ul>
+	</li>
+	<li>
+	<a href="#">기타</a>
+	<ul>
+		<li><a href="#">영화</a></li>
+		<li><a href="#">일기</a></li>
+	</ul>
+	</li>
 </ul>
 </nav>
-
-
-
-
 </header>
+
 <div id="header2">
-<p id="header2p">회원가입</p>
+	<p id="header2p">회원가입</p>
 </div>
 
-<!--<div id='sidebar'>
-<h3>SNS 등록</h3>
-<ul>
-<li><a href='#'>페이스북</a></li>
-<li><a href='#'>트위터</a></li>
-</ul>
-<h3>카테고리</h3>
-<ul>
-<li><a href='#'>디지털 아트</a></li>
-<li><a href='#'>사운드 아트</a></li>
-<li><a href='#'>정보 가시화</a></li>
-<li><a href='#'>뉴 미디어 프로그래밍</a></li>
-</ul>					
-</div>  'sidebar' 끝-->
 <section>
 	<article>
 	<br><br><br>

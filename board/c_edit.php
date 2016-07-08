@@ -27,6 +27,7 @@
 	else if($str5==0){$bd_title=$m_bbs;}
 	
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -62,7 +63,6 @@ $(function(){
 		document.fname.submit();
 	}
 </script>
-
 </head>
 
 <body>
@@ -145,106 +145,88 @@ $(function(){
 <div id="header2">
 	<p id="header2p"><?php echo $bd_title?></p>
 </div>
+
 <section>
 	<article>
 	<br><br>
 <table id="board_write">  
 
 <form name='edit' action='./c_edit_post.php' method='post' enctype='multipart/form-data'>
-
 <a href="./c_view.php?no=<?= $row[no]?>">
 <?php
-$query = "SELECT * FROM $id ". 
-"WHERE no='". $no. "' ;";
-
-
+	$query = "SELECT * FROM $id WHERE no='$no'";
 	$result= mysqli_query($con, $query);
 	$data= mysqli_fetch_array($result);
 ?>
 
-	<tr>
+<tr>
 	<td id="board_write_title_left">
-
-
-
-
-
-
-
-
-	 <select name='Search_mode'>
-		   <option value='<?= $id?>'> <?php echo $bd_title ?></option>
-	   </select>
+		<select name='Search_mode'>
+			<option value='<?= $id?>'> <?php echo $bd_title ?></option>	<!-- 수정시 수정보드만 보임-->
+		</select>
 	</td>
 
 	<input type='hidden' name='no' value='<?php echo $data[no]?>'>
 	<input type='hidden' name='id' value='<?php echo $id?>'>
 	<td id="board_write_title_right">
-	
-
 	<input type='text' name='subject' value='<?php echo $data[title]?>'>
 	</td>
-	</tr>
-	<tr><td>&nbsp;</td></tr>
+</tr>
 
-	<tr>
-	<td id="board_write_text" colspan='2'>
-	 <textarea id='ir1' name='story' style="width:80%; height:400px;"><?php echo nl2br($data[story])?></textarea>
-	 
-	</td>
-	</tr>
+<tr><td>&nbsp;</td></tr>
 
-	<script type="text/javascript">
-		var oEditors = [];
-		nhn.husky.EZCreator.createInIFrame({
-			oAppRef: oEditors,
-			elPlaceHolder: "ir1",
-			sSkinURI: "../SmartEditor2/SmartEditor2Skin.html",	
-			fCreator: "createSEditor2"
-		});
-
-		function submitContents(elClickedObj) {
-			oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
-			
-			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
-			
-			try {
-				elClickedObj.form.submit();
-			} catch(e) {}
-		}
-
-		</script>
-
-
-	<tr>
-	<td width='100%' height='30'  align='right' valign='middle' colspan='2'>
-<?if($data[file01]){?>
-<li>파일: <?php echo "<font color='3F6FF8'>". $data[file01]."</font>"; ?>
-&nbsp; &nbsp; &nbsp;
-
-<a href='#' onclick="window.open('./file_del.php?id=<?=$id?>&no=<?=$no?>','open','width=450,height=150,top=50,left=5,scrollbars=no, resizable=no')">
- <font color='FF0000'>[삭제]</font></a>
- <?}?>
- &nbsp; &nbsp; &nbsp; 
-파일: <input type='file' name='file01'>
+<tr>
+<td id="board_write_text" colspan='2'>
+	<textarea id='ir1' name='story' style="width:80%; height:400px;"><?php echo nl2br($data[story])?></textarea>
 </td>
 </tr>
+
+<script type="text/javascript">
+	var oEditors = [];
+	nhn.husky.EZCreator.createInIFrame({
+	oAppRef: oEditors,
+	elPlaceHolder: "ir1",
+	sSkinURI: "../SmartEditor2/SmartEditor2Skin.html",	
+	fCreator: "createSEditor2"
+	});
+
+	function submitContents(elClickedObj) {
+		oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
+
+		// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
+		try {
+			elClickedObj.form.submit();
+		} catch(e) {}
+	}
+</script>
+
+
 <tr>
-<td width='100%' height='auto' colspan='2' align='center' valign='middle'>
-<br>
-<input type='submit' value="완료" onclick='submitContents()' style="width:10%; height: 30px;">
-<input type='button' onclick='history.back(-1)' value='취소' style="width:10%; height: 30px;margin-left:20px;">
-	
-</td>
+	<td width='100%' height='30'  align='right' valign='middle' colspan='2'>
+	<?if($data[file01]){?>
+	<li>파일: <?php echo "<font color='3F6FF8'>". $data[file01]."</font>"; ?>
+	&nbsp; &nbsp; &nbsp;
 
-
+	<a href='#' onclick="window.open('./file_del.php?id=<?=$id?>&no=<?=$no?>','open','width=450,height=150,top=50,left=5,scrollbars=no, resizable=no')">
+	<font color='FF0000'>[삭제]</font></a>
+	<?}?>
+	&nbsp; &nbsp; &nbsp; 
+	파일: <input type='file' name='file01'>
+	</td>
+</tr>
+<tr>
+	<td width='100%' height='auto' colspan='2' align='center' valign='middle'>
+	<br>
+	<input type='submit' value="완료" onclick='submitContents()' style="width:10%; height: 30px;">
+	<input type='button' onclick='history.back(-1)' value='취소' style="width:10%; height: 30px;margin-left:20px;">
+	</td>
 </tr>
 </form>
 </table>
 
 <br><br>
 
-	</article>
+</article>
 </section>	
 <footer>
 	<address>

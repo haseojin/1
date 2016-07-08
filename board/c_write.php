@@ -116,12 +116,10 @@ $(function(){
 <section>
 	<article>
 	<br><br>
-<table id="board_write">  
-
-
-<form name='write' action='./c_write_post.php' method='post' enctype='multipart/form-data'>
-<tr>
-
+	<table id="board_write">  
+	<form name='write' action='./c_write_post.php' method='post' enctype='multipart/form-data'>
+	
+	<tr>
 	<td id="board_write_title_left">
 	 <select name='Search_mode'>
 		   <option value='c_bbs'>C/C++</option>
@@ -136,11 +134,11 @@ $(function(){
 	   </select>
 	</td>
 
-
 	<td id="board_write_title_right">
-	<input type='text' name='subject' placeholder="&nbsp;&nbsp;&nbsp;포스트 제목을 입력하세요">
+		<input type='text' name='subject' placeholder="&nbsp;&nbsp;&nbsp;포스트 제목을 입력하세요">
 	</td>
 	</tr>
+
 	<tr><td>&nbsp;</td></tr>
 
 	<tr>
@@ -150,46 +148,45 @@ $(function(){
 	</tr>
 
 	<script type="text/javascript">
-	var oEditors = [];
-	nhn.husky.EZCreator.createInIFrame({
-		oAppRef: oEditors,
-		elPlaceHolder: "ir1",
-		sSkinURI: "../SmartEditor2/SmartEditor2Skin.html",	
-		fCreator: "createSEditor2"
-	});
+		var oEditors = [];
+		nhn.husky.EZCreator.createInIFrame({
+			oAppRef: oEditors,
+			elPlaceHolder: "ir1",
+			sSkinURI: "../SmartEditor2/SmartEditor2Skin.html",	
+			fCreator: "createSEditor2"
+		});
 
-	function submitContents(elClickedObj) {
-		oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
-		
-		// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
+		function submitContents(elClickedObj) {
+			oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
+			
+			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
 
-		try {
-			elClickedObj.form.submit();
-		} catch(e) {}
-	}
-
+			try {
+				elClickedObj.form.submit();
+			} catch(e) {}
+		}
 	</script>
-
 
 	<tr>
 	<td width='100%' height='30'  align='right' valign='middle' colspan='2'>
-	<input type='file' name='file01'>
+		<input type='file' name='file01'>
 	</td>
 	</tr>
 
 	<tr>
 	<td width='100%' height='auto' colspan='2' align='center' valign='middle'>
-	<br>
-	<input type='Submit' value='쓰 기' onclick='submitContents()' style="width:10%; height: 30px;">
-	<input type="reset" value="취  소" style="width:10%; height: 30px; margin-left:20px;">
+		<br>
+		<input type='Submit' value='쓰 기' onclick='submitContents()' style="width:10%; height: 30px;">
+		<input type="reset" value="취  소" style="width:10%; height: 30px; margin-left:20px;">
 	</td>
 	</tr>
 </form>
 </table>
 <br><br>
 
-	</article>
-</section>	
+</article>
+</section>
+
 <footer>
 	<address>
 		Copyright &copy; 2016 hsj All Rights Reserved

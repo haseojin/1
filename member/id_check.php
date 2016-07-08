@@ -7,7 +7,7 @@
   include ("./lib/db_connect.php"); // DB접속
   mysqli_set_charset($con, 'utf8'); 
 
-  $sql = "SELECT * FROM member "."WHERE id='". $id. "';";
+  $sql = "SELECT * FROM member WHERE id='$id';";
   $result = mysqli_query($con,$sql); 
   $num_record=mysqli_num_rows($result);
 
@@ -24,7 +24,6 @@
     echo "는 중복되지 않았습니다.<br>";
   }
 ?>
-
 <br>
 <input type=button value="닫기" onclick="self.close()"></center>
 

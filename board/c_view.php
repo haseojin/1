@@ -31,8 +31,7 @@
 
 ?>
 <?php
-	$query = "SELECT * FROM $id ". 
-	"WHERE no='". $no. "' ;";
+	$query = "SELECT * FROM $id WHERE no=' $no'";
 
 	mysqli_query("set names utf8");
 	$result= mysqli_query($con, $query);
@@ -45,12 +44,11 @@
 ?>
 
 <?php
-$tquery="select count(*) from $comment_db where b_num=$no";
-//mysql_query("set names utf8");  //언어셋 utf8
-$tresult=  mysqli_query($con, $tquery);
-$ttemp= mysqli_fetch_array($tresult);
-$ttotals= $ttemp[0];
+	$tquery="select count(*) from $comment_db where b_num=$no";
 
+	$tresult=  mysqli_query($con, $tquery);
+	$ttemp= mysqli_fetch_array($tresult);
+	$ttotals= $ttemp[0];
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -186,86 +184,62 @@ $(function(){
 
 			
 	<table id="board_view">  
-	<tr>
-			
+	<tr>		
+	<td id="board_title">
+		<!--<span id="space_pre"></span>-->
+		<span id="board_title_title"><?php echo $data[title]?> </span>
 
-		<td id="board_title">
-			<!--<span id="space_pre"></span>-->
-			<span id="board_title_title"><?php echo $data[title]?> </span>
+		<span id="board_title_link">&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="./<?=$id?>.php"><?php echo $bd_title?></a>
+		</span>
 
-			<span id="board_title_link">&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-				<a href="./<?=$id?>.php"><?php echo $bd_title?></a>
-			</span>
-
-			<!--<span id="space2"></span>-->
-			<div id="board_title_date">
-				<?php echo $data[insert_date] ?>
-			</div>
-		</td>
+		<!--<span id="space2"></span>-->
+		<div id="board_title_date">
+			<?php echo $data[insert_date] ?>
+		</div>
+	</td>
 	</tr>
-
 
 	<tr id="board_view_story">
-		<td>
-			<?php 
-			if($data[file01]) {?>
-			<img src='./data/<?=$data[file01]?>' style="max-width:75%; height:auto;">
-			<?php }?>
+	<td>
+		<?php 
+		if($data[file01]) {?>
+		<img src='./data/<?=$data[file01]?>' style="max-width:75%; height:auto;">
+		<?php }?>
 
-			<br>
-			<?php echo $data[story]?>
-		</td>
+		<br>
+		<?php echo $data[story]?>
+	</td>
 	</tr>
 
-<tr>
-		<td bgcolor="#d4d5d3" width="100%" height="50px" align="right" valign="top">
-			<span class="a_style"><a href='./<?=$id?>.php'>글목록</a></span> &nbsp; &nbsp; 
-			<?php if($_SESSION['id']==null&&$_SESSION['aid']!=null){?>
-			<span class="a_style"><a href="./c_edit.php?id=<?=$id?>&no=<?= $data[no]?>">글수정</a></span> &nbsp; &nbsp; 
-			<span class="a_style"><a href="./c_delete.php?id=<?=$id?>&no=<?=$data[no]?>" onclick="return confirm('정말 삭제 하시겠습니까?');">삭 제</a></span>
-			<?php }?>
-			<?php
-				if($str5==0){
-					echo "";
-				}else{
-			?>
-			<p id="c_input">
-			덧글보기  <?php echo $ttotals?> 개
-			</p>
-			<?php }?>
-			</td>
-			</tr>
-		
-
-	
-
+	<tr>
+	<td bgcolor="#d4d5d3" width="100%" height="50px" align="right" valign="top">
+		<span class="a_style"><a href='./<?=$id?>.php'>글목록</a></span> &nbsp; &nbsp; 
+		<?php if($_SESSION['id']==null&&$_SESSION['aid']!=null){?>
+		<span class="a_style"><a href="./c_edit.php?id=<?=$id?>&no=<?= $data[no]?>">글수정</a></span> &nbsp; &nbsp; 
+		<span class="a_style"><a href="./c_delete.php?id=<?=$id?>&no=<?=$data[no]?>" onclick="return confirm('정말 삭제 하시겠습니까?');">삭 제</a></span>
+		<?php }?>
+		<?php
+			if($str5==0){
+				echo "";
+			}else{
+		?>
+		<p id="c_input">
+		덧글보기  <?php echo $ttotals?> 개
+		</p>
+		<?php }?>
+	</td>
+	</tr>
 	</table>
 	<br>
 
 <!-- comment DB -->
 <?php
-$query2 = "SELECT * FROM $comment_db WHERE b_num= $no";
+	$query2 = "SELECT * FROM $comment_db WHERE b_num= $no";
 
-mysqli_query("set names utf8");
-$result2= mysqli_query($con, $query2);
+	mysqli_query("set names utf8");
+	$result2= mysqli_query($con, $query2);
 ?>
-<!-- -->
-
-
-
-<!--
-
-$(function(){
-    $('#inner').hide();
-	$('#navi a').click(function(){
-        $('#inner').slideToggle(500, function(){
-            if($(this).is(':hidden')) $('#navi a').html('<img src="../img/bullets-white.png">');
-            else $('#navi a').html('<img src="../img/bullets-white.png">'); 
-        });
-    });
-});
--->
-<!-- 댓글 리스트 시작 -->
 
 <div class="comment">
 	<table id="c_table">
@@ -273,7 +247,6 @@ $(function(){
 		if($ttotals==0){
 			echo "댓글없음";
 		}
-
 		while($row = mysqli_fetch_array($result2)){
 		?>
 
@@ -296,40 +269,33 @@ $(function(){
 <!-- 댓글 리스트 끝-->
 
 <?php
-				if($str5==0){
-					echo "";
-				}else{
-			?>
+	if($str5==0){
+		echo "";
+	}else{
+?>
 <!-- 댓글 입력창 시작 -->
 <div id="comment_insert">
-
 <form name="comment_insert" action="./comment_write.php" method="get">
-<input type='hidden' name='id' value='<?php echo $id?>'>
-<input type='hidden' name='no' value='<?php echo $data[no]?>'>
-<textarea name="comment_insert" rows="3" cols="80" placeholder="내용을 입력하세요."
-style="resize:none;width:90% ;overflow:auto;"  wrap="hard"></textarea>
-<input id="c_input" type='Submit' value='&nbsp;&nbsp;&nbsp;입력&nbsp;&nbsp;&nbsp;'>
-
-
-
+	<input type='hidden' name='id' value='<?php echo $id?>'>
+	<input type='hidden' name='no' value='<?php echo $data[no]?>'>
+	<textarea name="comment_insert" rows="3" cols="80" placeholder="내용을 입력하세요."
+	style="resize:none;width:90% ;overflow:auto;"  wrap="hard"></textarea>
+	<input id="c_input" type='Submit' value='&nbsp;&nbsp;&nbsp;입력&nbsp;&nbsp;&nbsp;'>
 </form>
 </div>
 <!-- 댓글 입력창 끝 -->
-
 <?php }?>
 
-	<br><br><br>
+<br><br><br>
 
-	</article>
+</article>
 </section>	
+
 <footer>
 	<address>
 		Copyright &copy; 2016 hsj All Rights Reserved
 	</address>
 </footer>
-
-
-
 
 <a style="display:scroll; position:fixed; bottom:10px; right:20px;" href="#" title=Top>
 	<img src="../img/top.png">

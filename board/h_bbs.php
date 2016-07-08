@@ -54,7 +54,7 @@ $(function(){
 	include ("../lib/db_connect.php");
 	$_page=$_GET[_page];
 
-	$view_total = 10; //한 페이지에 3개 게시글이 보인다.
+	$view_total = 10; //한 페이지에 20개 게시글이 보인다.
 	if(!$_page)($_page=1); //페이지 번호가 지정이 안되었을 경우
 	$page= ($_page-1)*$view_total;
 
@@ -72,10 +72,10 @@ $(function(){
 
 	/////////////////////검색
 	if($_GET['Search_text']){//검색시
-	$sql2 = "SELECT * FROM h_bbs WHERE ".$_GET['Search_mode']." LIKE '%".$_GET['Search_text']."%'   order by no desc limit $page, $view_total";
+	$sql2 = "SELECT * FROM h_bbs WHERE $_GET['Search_mode'] LIKE '%$_GET['Search_text']%'   order by no desc limit $page, $view_total";
 	$result2 = mysqli_query($con, $sql2); 
 
-	$query="select count(*) from h_bbs WHERE ".$_GET['Search_mode']." LIKE '%".$_GET['Search_text']."%'  limit $page, $view_total";
+	$query="select count(*) from h_bbs WHERE $_GET['Search_mode'] LIKE '%$_GET['Search_text']%'  limit $page, $view_total";
 	//mysql_query("set names utf8");  //언어셋 utf8
 	$result=  mysqli_query($con, $query);
 	$temp= mysqli_fetch_array($result);

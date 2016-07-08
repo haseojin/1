@@ -36,10 +36,7 @@ header{background-color:#4d6c8b;height:200px;}
 #main_menu li ul{position:absolute;list-style:none;text-align:center;width:180px;left:50%;margin-left:-90px;top:10px;font-size:12px;max-height:0px;overflow:hidden;-webkit-transition:max-height 0.4s linear;-moz-transition:max-height 0.4s linear;transition:max-height 0.4s linear;color: #9b9b9b;}
 #main_menu li ul li{background-color:#fff;border-left: 1px solid #c5c5c5;border-right: 1px solid #c5c5c5;}
 #main_menu li ul li a{padding:12px;color: #858585; !important;text-decoration:none !important;display:block;}
-/* 
-#main_menu li ul li:nth-child(odd){
-	background-color:#363636;
-}부메뉴 홀수li 설정*/
+
 #main_menu li ul li:hover{background-color:#f4f4f4;}
 #main_menu li ul li:first-child{border-radius:3px 3px 0 0;margin-top:25px;position:relative;border-top:1px solid #c5c5c5;}
 #main_menu li ul li:first-child:before{content:'';position:absolute;width:1px;height:1px;border:5px solid transparent;border-bottom-color:#fff;left:50%;top:-10px;margin-left:-5px;}

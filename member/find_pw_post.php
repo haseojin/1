@@ -11,18 +11,15 @@
   $p_number=$tel1. $tel2. $tel3;
   $e_mail=$_POST[email];
   
-  $sql = "SELECT * FROM member ". 
-  "WHERE id='". $id. "';";
+  $sql = "SELECT * FROM member WHERE id='$id'";
   $result = mysqli_query($con,$sql); 
   $num_record=mysqli_num_rows($result);
 
-  $sql2 = "SELECT * FROM member ". 
-  "WHERE p_number='". $p_number. "';";
+  $sql2 = "SELECT * FROM member WHERE p_number=$p_number";
   $result2 = mysqli_query($con,$sql2); 
   $num_record2=mysqli_num_rows($result2);
 
-  $sql3 = "SELECT * FROM member ". 
-  "WHERE e_mail='". $e_mail. "';";
+  $sql3 = "SELECT * FROM member WHERE e_mail='$e_mail'";
   $result3 = mysqli_query($con,$sql3); 
   $num_record3=mysqli_num_rows($result3);
 
@@ -33,16 +30,13 @@
           window. alert('비밀번호 변경페이지로 이동합니다.');
           location.href='./change_pw_form.php';
           </script>";
-    }
-    else{
+    }else{
     echo"<script>
           window. alert('다시한번 확인해 주세요.');
           location.href='./find_pw_form.php';
           </script>";
     }
-  }
-  else
-  {
+  }else{
   echo"<script>
         window. alert('없는 아이디입니다. 다시한번 확인해 주세요.');
         location.href='./find_pw_form.php';

@@ -42,6 +42,7 @@
 				echo ("&nbsp; <a href=$PHP_SELF?_page=$e$href>[$e]</a>&nbsp;");  //$e와 $_page번호가 서로 같지 않으면...
 			}
 		}
+		
 		//다음페이지 그룹 출력
 		$next_group= $last;
 		if($next_group > $rr)($next_group=$rr); //$next_group는 $rr보다 크면 $rr은 $next_group가 된다.

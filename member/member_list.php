@@ -8,7 +8,7 @@
 
 	$_page=$_GET[_page];
 
-	$view_total = 10; //한 페이지에 3개 게시글이 보인다.
+	$view_total = 10; //한 페이지에 10개 게시글이 보인다.
 	if(!$_page)($_page=1); //페이지 번호가 지정이 안되었을 경우
 	$page= ($_page-1)*$view_total;
 
@@ -25,11 +25,11 @@
 
 	/////////////////////검색
 	if($_GET['Search_text']){//검색시
-		$sql2 = "SELECT * FROM member WHERE ".$_GET['Search_mode']." LIKE '%".$_GET['Search_text']."%'  limit $page, $view_total";
+		$sql2 = "SELECT * FROM member WHERE $_GET['Search_mode'] LIKE '%$_GET['Search_text']%'  limit $page, $view_total";
 		$result2 = mysqli_query($con, $sql2); 
 
-		$query="select count(*) from member WHERE ".$_GET['Search_mode']." LIKE '%".$_GET['Search_text']."%'  limit $page, $view_total";
-		//mysql_query("set names utf8");  //언어셋 utf8
+		$query="select count(*) from member WHERE $_GET['Search_mode'] LIKE '%$_GET['Search_text']%'  limit $page, $view_total";
+
 		$result=  mysqli_query($con, $query);
 		$temp= mysqli_fetch_array($result);
 		$totals= $temp[0];
@@ -142,20 +142,7 @@ $(function(){
 	<p id="header2p">회원목록</p>
 </div>
 
-		<!--<div id='sidebar'>
-			<h3>SNS 등록</h3>
-			<ul>
-				<li><a href='#'>페이스북</a></li>
-				<li><a href='#'>트위터</a></li>
-			</ul>
-			<h3>카테고리</h3>
-			<ul>
-				<li><a href='#'>디지털 아트</a></li>
-				<li><a href='#'>사운드 아트</a></li>
-				<li><a href='#'>정보 가시화</a></li>
-				<li><a href='#'>뉴 미디어 프로그래밍</a></li>
-			</ul>					
-		</div>  'sidebar' 끝-->
+		
 <section>
 	<article>
 	<br><br><br>
@@ -182,12 +169,8 @@ $(function(){
 		</tr>
 	</table>
 	<table id="member_list3">
-		<!--<c:if test="${reqPage != null }">
-		<c:set var="seq_no" value="${(dbCount -(reqPage-1)*pageSize) }" />
-		</c:if>-->
 		<?php 
-		//for($i = 0; $row = mysqli_fetch_array($result2); $i++){ //결과물을 뿌려줌 
-		while($row = mysqli_fetch_array($result2)){
+			while($row = mysqli_fetch_array($result2)){
 		?> 
 			<tr class="m_list3_line">
 			<td class="num"><?php echo $member_count; ?></td>

@@ -5,8 +5,7 @@
 <?php
 	include ("../lib/db_connect.php");
 	mysqli_set_charset($con, 'utf8'); 
-	$sql = "SELECT * FROM member ". 
-       "WHERE id='". $id. "';";
+	$sql = "SELECT * FROM member WHERE id= $id";
 	$result = mysqli_query($con,$sql); 
     $num_record=mysqli_num_rows($result);
     $sql2 = "UPDATE member SET pw = '$pw' WHERE id='$id'";
@@ -179,20 +178,7 @@ $(function(){
 		?>
 	</p>
 </div>
-<!--<div id='sidebar'>
-<h3>SNS 등록</h3>
-<ul>
-<li><a href='#'>페이스북</a></li>
-<li><a href='#'>트위터</a></li>
-</ul>
-<h3>카테고리</h3>
-<ul>
-<li><a href='#'>디지털 아트</a></li>
-<li><a href='#'>사운드 아트</a></li>
-<li><a href='#'>정보 가시화</a></li>
-<li><a href='#'>뉴 미디어 프로그래밍</a></li>
-</ul>					
-</div>  'sidebar' 끝-->
+
 <section>
 	<article>
 	<br><br><br>
